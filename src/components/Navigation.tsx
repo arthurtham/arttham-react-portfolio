@@ -73,6 +73,13 @@ function Navigation({parentToChild, modeChange}: any) {
     </Box>
   );
 
+  const name = (
+    // Left align label with my name
+    <h2 style={{ flexGrow: 1, paddingLeft: '1rem' }}>
+      Arthur Tham
+    </h2>
+  );
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -83,7 +90,7 @@ function Navigation({parentToChild, modeChange}: any) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none',  } }}
           >
             <MenuIcon />
           </IconButton>
@@ -92,7 +99,8 @@ function Navigation({parentToChild, modeChange}: any) {
           ) : (
             <DarkModeIcon onClick={() => modeChange()}/>
           )}
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          {name}
+          <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
                 {item[0]}
@@ -110,7 +118,7 @@ function Navigation({parentToChild, modeChange}: any) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'block', md: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

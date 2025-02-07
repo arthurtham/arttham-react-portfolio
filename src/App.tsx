@@ -4,7 +4,7 @@ import {
   Timeline,
   Expertise,
   Project,
-  Contact,
+  ContactStatic,
   Navigation,
   Footer,
 } from "./components";
@@ -34,7 +34,7 @@ function App() {
             <Expertise/>
             <Timeline/>
             <Project/>
-            <Contact/>
+            <ContactStatic/>
         </FadeIn>
         <Footer />
     </div>
