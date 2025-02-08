@@ -1,12 +1,12 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
 import '../assets/styles/Main.scss';
-import profileImage from '../assets/images/arthur-tham-profile.png';
+import profileImage from '../assets/images/arthur-tham-profile-yellow.jpg';
 
 function Main() {
 
   return (
-    <div className="container">
+    <div className="container" id="main-container">
       <div className="about-section">
         <div className="image-wrapper">
           <img src={profileImage} alt="Avatar" />
