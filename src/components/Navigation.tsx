@@ -16,8 +16,10 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
+import ProfilePicture from '../assets/images/arthur-tham-profile-yellow.jpg';
+
 const drawerWidth = 240;
-const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [['Skills', 'expertise'], ['Career', 'history'], ['Education', 'education'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -74,10 +76,14 @@ function Navigation({parentToChild, modeChange}: any) {
   );
 
   const name = (
+    // Add image to navigation bar
     // Left align label with my name
-    <h2 style={{ flexGrow: 1, paddingLeft: '1rem' }}>
-      Arthur Tham
+    <div style={{ display: "flex", flexGrow: 1, flexDirection: "row"}}>
+      <img src={ProfilePicture} style={{ height: "40px", borderRadius:"20em"}} alt="Arthur Tham Cartoon Head" />
+      <h2 style={{ paddingLeft: "1rem", paddingTop: 0, paddingBottom: 0, margin: 0 }}>
+        Arthur Tham
     </h2>
+    </div>
   );
 
   return (
@@ -85,20 +91,6 @@ function Navigation({parentToChild, modeChange}: any) {
       <CssBaseline />
       <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
         <Toolbar className='navigation-bar'>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none',  } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
-          )}
           {name}
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             {navItems.map((item) => (
@@ -107,6 +99,20 @@ function Navigation({parentToChild, modeChange}: any) {
               </Button>
             ))}
           </Box>
+          {mode === 'dark' ? (
+            <LightModeIcon onClick={() => modeChange()}/>
+          ) : (
+            <DarkModeIcon onClick={() => modeChange()}/>
+          )}
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ ml: 1, mr: 0, display: { md: 'none',  } }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <nav>

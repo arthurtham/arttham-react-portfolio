@@ -3,6 +3,7 @@ import {
   Main,
   Timeline,
   Expertise,
+  Education,
   Project,
   ContactStatic,
   Navigation,
@@ -33,6 +34,7 @@ function App() {
             <Main/>
             <Expertise/>
             <Timeline/>
+            <Education/>
             <Project/>
             <ContactStatic/>
         </FadeIn>

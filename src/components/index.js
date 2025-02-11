@@ -7,3 +7,4 @@ export { default as Project } from "./Project";
 export { default as Contact } from "./Contact";
 export { default as ContactStatic } from "./ContactStatic";
 export { default as SocialLinks } from "./SocialLinks";
+export { default as Education } from "./Education";
