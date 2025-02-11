@@ -17,11 +17,11 @@ function Project() {
     <div className="projects-container" id="projects">
         <h1>Personal Projects</h1>
         <p>This section is being rebuilt! For now, please visit the link below.</p>
-        <a href="https://arttham.com/project">
-            <Button key="0" variant="contained" sx={{ backgroundColor: '#5000ca', color: '#fff', width: 'max-content' }}>
+        <p><a href="https://arttham.com/project">
+            <Button variant="contained" sx={{ backgroundColor: '#5000ca', color: '#ffffff !important', width: 'max-content' }}>
                 All Projects
             </Button>
-        </a>
+        </a></p>
     </div>
     
     );

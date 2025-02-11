@@ -14,7 +14,7 @@ function Main() {
         <div className="content">
           <SocialLinks/>
           <h1>Arthur Tham</h1>
-          <p>Software Engineer & Broadcast Expert</p>
+          <p>Software Engineer & Media Broadcaster</p>
 
           <SocialLinks mobile={true} />
         </div>

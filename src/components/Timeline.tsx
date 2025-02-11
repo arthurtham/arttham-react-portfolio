@@ -24,13 +24,13 @@ const careerEntries = [
     "date"       : "",
     "icon"       : null,
     "description": (
-      <p>This section is being rebuilt! For now, please visit this link.
+      <>This section is being rebuilt! For now, please visit this link.<br/>
       <a href="https://arttham.com/cv">
-        <Button key="0" variant="contained" sx={{ backgroundColor: '#5000ca', color: '#fff', width: 'max-content' }}>
+        <Button variant="contained" sx={{ backgroundColor: '#5000ca', color: '#ffffff !important', width: 'max-content' }}>
             CV
         </Button>
       </a>
-      </p>
+      </>
     )
   }
 ]
@@ -43,6 +43,7 @@ function Timeline() {
         <VerticalTimeline>
           {careerEntries.map((entry, index) => (
             <VerticalTimelineElement
+              key={index}
               className="vertical-timeline-element--work"
               date={entry["date"] || ""}
               iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
@@ -54,7 +55,7 @@ function Timeline() {
                 {entry["description"] || "No description"}
               </p>
             </VerticalTimelineElement>
-          ))};
+          ))}
         </VerticalTimeline>
       </div>
     </div>

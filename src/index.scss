@@ -47,6 +47,17 @@ p, a, h1, h2, h3, h4, h5, label, button {
   svg {
     cursor: pointer;
   }
+
+  .navigation-bar-left {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navigation-bar-right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
 }
 
 .navigation-bar-responsive {
@@ -85,7 +96,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .items-container {
-  padding: 5% 10%;
+  padding: 5% 10% 0%;
   text-align: left;
   display: flex;
   flex-direction: column;

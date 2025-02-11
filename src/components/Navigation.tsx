@@ -19,7 +19,7 @@ import Toolbar from '@mui/material/Toolbar';
 import ProfilePicture from '../assets/images/arthur-tham-profile-yellow.jpg';
 
 const drawerWidth = 240;
-const navItems = [['Skills', 'expertise'], ['Career', 'history'], ['Education', 'education'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [['About', 'about'], ['Skills', 'expertise'], ['Career', 'history'], ['Education', 'education'], ['Projects', 'projects'], ['Contact', 'contact']];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -49,19 +49,19 @@ function Navigation({parentToChild, modeChange}: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section)
+    // console.log(section)
     const expertiseElement = document.getElementById(section);
     if (expertiseElement) {
       expertiseElement.scrollIntoView({ behavior: 'smooth' });
-      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+      // console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
     } else {
-      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+      // console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
     }
   };
 
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p className="mobile-menu-top"><ListIcon/>Menu</p>
+      <p className="mobile-menu-top"><ListIcon/>Navigation</p>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -76,9 +76,7 @@ function Navigation({parentToChild, modeChange}: any) {
   );
 
   const name = (
-    // Add image to navigation bar
-    // Left align label with my name
-    <div style={{ display: "flex", flexGrow: 1, flexDirection: "row"}}>
+    <div style={{ display: "flex", flexDirection: "row", paddingRight: "20px"}}>
       <img src={ProfilePicture} style={{ height: "40px", borderRadius:"20em"}} alt="Arthur Tham Cartoon Head" />
       <h2 style={{ paddingLeft: "1rem", paddingTop: 0, paddingBottom: 0, margin: 0 }}>
         Arthur Tham
@@ -91,6 +89,7 @@ function Navigation({parentToChild, modeChange}: any) {
       <CssBaseline />
       <AppBar component="nav" id="navigation" className={`navbar-fixed-top${scrolled ? ' scrolled' : ''}`}>
         <Toolbar className='navigation-bar'>
+          <div className='navigation-bar-left'>
           {name}
           <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
             {navItems.map((item) => (
@@ -99,25 +98,29 @@ function Navigation({parentToChild, modeChange}: any) {
               </Button>
             ))}
           </Box>
-          {mode === 'dark' ? (
-            <LightModeIcon onClick={() => modeChange()}/>
-          ) : (
-            <DarkModeIcon onClick={() => modeChange()}/>
-          )}
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ ml: 1, mr: 0, display: { md: 'none',  } }}
-          >
-            <MenuIcon />
-          </IconButton>
+          </div>
+          <div className="navigation-bar-right">
+            {mode === 'dark' ? (
+              <LightModeIcon onClick={() => modeChange()}/>
+            ) : (
+              <DarkModeIcon onClick={() => modeChange()}/>
+            )}
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ ml: 1, mr: 0, display: { md: 'none',  } }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <nav>
         <Drawer
           variant="temporary"
+          anchor="right"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
