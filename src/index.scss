@@ -47,6 +47,17 @@ p, a, h1, h2, h3, h4, h5, label, button {
   svg {
     cursor: pointer;
   }
+
+  .navigation-bar-left {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navigation-bar-right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
 }
 
 .navigation-bar-responsive {
@@ -85,7 +96,7 @@ p, a, h1, h2, h3, h4, h5, label, button {
 }
 
 .items-container {
-  padding: 5% 10%;
+  padding: 5% 10% 0%;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -103,6 +114,12 @@ p, a, h1, h2, h3, h4, h5, label, button {
     color: #0d1116;
   }
 
+  #main-container {
+    p, a, h1, h2, h3, h4, h5, label, button {
+      color: #fff;
+    }
+  }
+
   a:hover {
     color: #5000ca;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
@@ -110,10 +127,6 @@ p, a, h1, h2, h3, h4, h5, label, button {
 
   .navigation-bar svg {
     color: #0d1116;
-  }
-
-  .about-section {
-    background-image: url("./assets/images/bg-light.png");
   }
 
   .skills-container svg {

@@ -1,16 +1,15 @@
 import React from "react";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SocialLinks from "./SocialLinks";
 import '../assets/styles/Footer.scss'
 
 function Footer() {
   return (
     <footer>
       <div>
-        <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+        <SocialLinks/>
       </div>
-      <p>A portfolio designed & built by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
+      <p>This base portfolio template was designed & built in React by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
+      <p>The "Arthur" avatar is drawn by the talented <a href="https://www.janinecarpena.com/" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Janine Carpena</a>.</p>
     </footer>
   );
 }

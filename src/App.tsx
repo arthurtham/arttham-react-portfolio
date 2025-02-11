@@ -3,10 +3,12 @@ import {
   Main,
   Timeline,
   Expertise,
+  Education,
   Project,
-  Contact,
+  ContactStatic,
   Navigation,
   Footer,
+  About,
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
@@ -31,10 +33,12 @@ function App() {
         <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
         <FadeIn transitionDuration={700}>
             <Main/>
+            <About/>
             <Expertise/>
             <Timeline/>
+            <Education/>
             <Project/>
-            <Contact/>
+            <ContactStatic/>
         </FadeIn>
         <Footer />
     </div>

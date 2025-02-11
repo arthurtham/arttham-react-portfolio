@@ -1,0 +1,46 @@
+.education-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100% !important;
+
+    svg {
+        color: white;
+    }
+}
+  
+.education-container .education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 50px;
+}
+  
+.education-container .education-grid .education {
+    align-items: left;
+    text-align: left;
+}
+ 
+@media screen {
+    @media (max-width: 768px) {
+        .education-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    
+        .education-container .education-grid {
+            display: initial;
+        }
+        
+        .education-container .education-grid .skill {
+            padding-bottom: 5%;
+        }
+    }
+
+    @media (max-width: 567px) {
+        .education {
+            font-size: 12px;
+        }
+    }
+}

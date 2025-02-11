@@ -1,56 +1,70 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faPython, faPhp, faBootstrap, faGoogle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
+import { faBroadcastTower, faComputer, faDatabase, faVideo } from "@fortawesome/free-solid-svg-icons";
 
 const labelsFirst = [
-    "React",
-    "TypeScript",
+    "PHP",
+    "MySQL",
+    "MariaDB",
+    "MongoDB",
+    "Python",
+    "Flask",
     "JavaScript",
     "HTML5",
-    "CSS3",
-    "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
-    "Postman"
+    "Bootstrap",
+    "Apache",
+    "Postman",
+    "Cloudinary CDN",
+    "GameMaker: Studio (1)",
+    "Unity",
+    "WebFlow",
 ];
 
 const labelsSecond = [
     "Git",
     "GitHub Actions",
-    "Docker",
-    "AWS",
-    "Azure",
+    "VMWare",
+    "Google Cloud Platform",
+    "Namecheap",
+    "cPanel",
+    "Windows",
+    "macOS",
     "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "iOS",
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "OBS Studio",
+    "VDO.Ninja",
+    "StreamLabs OBS",
+    "StreamElements",
+    "Restream",
+    "Sheets.io",
+    "Snaz Timer",
+    "React Fugi Tech",
+    "Voicemeeter",
+    "Discord",
+    "Twitch",
+    "YouTube"
 ];
 
 function Expertise() {
     return (
     <div className="container" id="expertise">
         <div className="skills-container">
-            <h1>Expertise</h1>
+            <h1>Skills Overview</h1>
             <div className="skills-grid">
                 <div className="skill">
-                    <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <FontAwesomeIcon icon={faDatabase} size="3x"/>&nbsp;
+                    <FontAwesomeIcon icon={faBootstrap} size="3x"/>&nbsp; 
+                    <FontAwesomeIcon icon={faPython} size="3x"/>&nbsp;
+                    <FontAwesomeIcon icon={faPhp} size="3x"/>&nbsp; 
+                    <h3>Web Development</h3>
+                    <p>I work on back-end websites primary supported by the PHP/MySQL LAMP stack. I've published websites from scratch in the Bootstrap framework. I can set up databases in MySQL, MariaDB, and MongoDB, and I use MySQLWorkbench and phpMyAdmin to manage data. I also have experience using WebFlow, and I'm currently exploring React and other web technologies.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
@@ -60,9 +74,11 @@ function Expertise() {
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <FontAwesomeIcon icon={faGithub} size="3x"/>&nbsp;
+                    <FontAwesomeIcon icon={faGoogle} size="3x"/>&nbsp;
+                    <FontAwesomeIcon icon={faComputer} size="3x"/>&nbsp;
+                    <h3>Project Deployment</h3>
+                    <p>I utilize online cloud platforms like Google Cloud and Namecheap/cPanel to host websites. For website development and deployment, I use Git and GitHub Actions on those cloud platforms alongside VMWare and virtual machine environments. With project tracking on Google Apps and GitHub, it's easy to iterate and deploy applications quickly and efficiently. </p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (
@@ -72,11 +88,12 @@ function Expertise() {
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <FontAwesomeIcon icon={faBroadcastTower} size="3x"/>&nbsp;
+                    <FontAwesomeIcon icon={faVideo} size="3x"/>&nbsp;
+                    <h3>Media Broadcasting</h3>
+                    <p>I help organizations run remote broadcasts of their events, using OBS Studio alongside many support applications to bring together a simple yet effective experiece for viewers. Whether it's for an esports event or for a weekly podcast, I got your back setting up your stream to get started right away.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
+                        <span className="chip-title">Applications:</span>
                         {labelsThird.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
