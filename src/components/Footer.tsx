@@ -8,7 +8,8 @@ function Footer() {
       <div>
         <SocialLinks/>
       </div>
-      <p>This base portfolio was designed & built by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
+      <p>This base portfolio template was designed & built in React by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
+      <p>The "Arthur" avatar is drawn by the talented <a href="https://www.janinecarpena.com/" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Janine Carpena</a>.</p>
     </footer>
   );
 }
