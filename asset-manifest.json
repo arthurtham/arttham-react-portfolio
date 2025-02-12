@@ -1,16 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.bc070a48.css",
-    "main.js": "/static/js/main.d4004e90.js",
+    "main.js": "/static/js/main.5632ce5a.js",
     "static/js/453.04a809ff.chunk.js": "/static/js/453.04a809ff.chunk.js",
+    "static/media/app-kiwanis.png": "/static/media/app-kiwanis.41f1c09edc71fb57a0ec.png",
+    "static/media/app-concentration.png": "/static/media/app-concentration.8136c350bc9cdf8e500f.png",
+    "static/media/app-default.png": "/static/media/app-default.26ffa91a9ebe13f6af9c.png",
+    "static/media/app-cashmountain.png": "/static/media/app-cashmountain.f8a037e0c2ca01e21bd5.png",
+    "static/media/app-hackuwu.png": "/static/media/app-hackuwu.f32e68fb53ba6c8f5738.png",
     "static/media/arthur-tham-profile-yellow.jpg": "/static/media/arthur-tham-profile-yellow.3244f729680e4cd2c16f.jpg",
     "index.html": "/index.html",
     "main.bc070a48.css.map": "/static/css/main.bc070a48.css.map",
-    "main.d4004e90.js.map": "/static/js/main.d4004e90.js.map",
+    "main.5632ce5a.js.map": "/static/js/main.5632ce5a.js.map",
     "453.04a809ff.chunk.js.map": "/static/js/453.04a809ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc070a48.css",
-    "static/js/main.d4004e90.js"
+    "static/js/main.5632ce5a.js"
   ]
 }
