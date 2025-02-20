@@ -5,7 +5,7 @@ import { faBriefcase, faTelevision } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
-import { Button } from "@mui/material";
+import { Box, Button, Modal, Typography } from "@mui/material";
 
 /* EXAMPLE
 {
@@ -112,25 +112,36 @@ const careerEntries = [
       </>
     )
   },
-  {
-    "title"      : "There's even more!",
-    "location"   : "-",
-    "company"    : "-",
-    "date"       : "",
-    "icon"       : null,
-    "description": (
-      <>This section is being rebuilt! For now, please visit this link.<br/><br/>
-      <a href="https://arttham.com/cv">
-        <Button variant="contained" sx={{ backgroundColor: '#5000ca', color: '#ffffff !important', width: 'max-content' }}>
-            CV
-        </Button>
-      </a>
-      </>
-    )
-  }
 ]
 
 function Timeline() {
+  const [open, setOpen] = React.useState(false);
+  const [careerModalTitle, setCareerModalTitle] = React.useState("title");
+  const [careerModalDescription, setCareerModalDescription] = React.useState(() => <></>);
+  const [careerModalCompany, setCareerModalCompany] = React.useState("company");
+  const [careerModalLocation, setCareerModalLocation] = React.useState("location");
+  const [careerModalDate, setCareerModalDate] = React.useState("date");
+  const careerModalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  }
+  const handleOpen = (index: number) => {
+    var careerEntry = careerEntries[index];
+    setCareerModalTitle(careerEntry["title"]);
+    setCareerModalDescription(careerEntry["description"]);
+    setCareerModalLocation(careerEntry["location"]);
+    setCareerModalCompany(careerEntry["company"]);
+    setCareerModalDate(careerEntry["date"]);
+    setOpen(true);
+  }
+  const handleClose = () => setOpen(false);
   return (
     <div id="history">
       <div className="items-container">
@@ -146,11 +157,44 @@ function Timeline() {
               >
               <h3 className="vertical-timeline-element-title">{entry["title"] || "Experience"}</h3>
               <h4 className="vertical-timeline-element-subtitle">{entry["company"] || "Personal"} - {entry["location"] || "Remote"}</h4>
-              {entry["description"] || "No description"}
+              <p>
+                <Button onClick={() => handleOpen(index)}>Details</Button>
+              </p>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
+        <div className="container">
+          <h1>There's even more!</h1>
+          <p>While this section is being updated, please visit this link below for the full list of experience.</p>
+          <p>
+            <a href="https://arttham.com/cv">
+            <Button variant="contained" sx={{ backgroundColor: '#5000ca', color: '#ffffff !important', width: 'max-content' }}>
+                Full List of Experience
+            </Button>
+          </a></p>
+        </div>
       </div>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="career-modal-title"
+        aria-describedby="career-modal-description"
+      >
+        <Box sx={careerModalStyle}>
+          <Typography id="career-modal-title" variant="h6" component="h2" color="black">
+            <strong>{careerModalTitle}</strong>
+          </Typography>
+          <Typography id="career-modal-description" color="black" sx={{ mt: 2 }}>
+            <strong>{careerModalCompany || "Personal"} - {careerModalLocation || "Remote"}</strong>
+          </Typography>
+          <Typography id="career-modal-description" color="black" sx={{ mt: 2 }}>
+            {careerModalDate || ""}
+          </Typography>
+          <Typography id="career-modal-description" color="black" sx={{ mt: 2 }}>
+            {careerModalDescription}
+          </Typography>
+        </Box>
+      </Modal>
     </div>
   );
 }
