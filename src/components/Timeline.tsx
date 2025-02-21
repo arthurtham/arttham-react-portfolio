@@ -156,9 +156,9 @@ function Timeline() {
               icon={<FontAwesomeIcon icon={entry["icon"] || faBriefcase} />}
               >
               <h3 className="vertical-timeline-element-title">{entry["title"] || "Experience"}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{entry["company"] || "Personal"} - {entry["location"] || "Remote"}</h4>
+              <h6 className="vertical-timeline-element-subtitle">{entry["company"] || "Personal"} - {entry["location"] || "Remote"}</h6>
               <p>
-                <Button onClick={() => handleOpen(index)}>Details</Button>
+                <Button variant="contained" sx={{ backgroundColor: '#ff845b', color: '#ffffff !important', width: 'max-content' }} onClick={() => handleOpen(index)}>Details</Button>
               </p>
             </VerticalTimelineElement>
           ))}
