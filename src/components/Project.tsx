@@ -94,14 +94,15 @@ function Project() {
             </div>
             ))}
         </div>
-
-        <h2>There's even more!</h2>
-        <p>This section is being rebuilt! For now, please visit the link below for all projects.</p>
-        <p><a href="https://arttham.com/project">
-            <Button variant="contained" sx={{ backgroundColor: '#5000ca', color: '#ffffff !important', width: 'max-content' }}>
-                All Projects
-            </Button>
-        </a></p>
+        <div className="projects-footer">
+            <h2>There's even more!</h2>
+            <p>This section is being rebuilt! For now, please visit the link below for all projects.</p>
+            <p><a href="https://arttham.com/project">
+                <Button variant="contained" sx={{ backgroundColor: '#5000ca', color: '#ffffff !important', width: 'max-content' }}>
+                    All Projects
+                </Button>
+            </a></p>
+        </div>
     </div>
     
     );
