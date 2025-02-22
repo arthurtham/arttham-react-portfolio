@@ -1,7 +1,7 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faTelevision } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faCloud, faGamepad, faGlobe, faNetworkWired, faTelevision } from '@fortawesome/free-solid-svg-icons';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
@@ -23,7 +23,7 @@ const careerEntries = [
     "location"   : "Remote, Los Angeles, CA",
     "company"    : "Kiwanis Club of Rosemead, Kiwanis International",
     "date"       : "Jun 2024 - Present",
-    "icon"       : null,
+    "icon"       : faGlobe,
     "description": (
       <>
         <ul>
@@ -57,7 +57,7 @@ const careerEntries = [
     "location"   : "Los Angeles, CA & Washington, D.C.",
     "company"    : "OS Studios (Freelance)",
     "date"       : "Sep 2022 - Present",
-    "icon"       : null,
+    "icon"       : faNetworkWired,
     "description": (
       <>
         <ul>
@@ -72,7 +72,7 @@ const careerEntries = [
     "location"   : "Remote, San Francisco, CA",
     "company"    : "Cloudinary, Inc.",
     "date"       : "Dec 2021 - Apr 2022",
-    "icon"       : null,
+    "icon"       : faCloud,
     "description": (
       <>
         <ul>
@@ -87,7 +87,7 @@ const careerEntries = [
     "location"   : "Remote, San Francisco, CA",
     "company"    : "Twilio, Inc.",
     "date"       : "Sep 2021 - Dec 2021",
-    "icon"       : null,
+    "icon"       : faGamepad,
     "description": (
       <>
         <ul>
@@ -102,7 +102,7 @@ const careerEntries = [
     "location"   : "Irvine, CA",
     "company"    : "Circle K International at UC Irvine, Kiwanis International",
     "date"       : "Mar 2016 - Jun 2019",
-    "icon"       : null,
+    "icon"       : faGlobe,
     "description": (
       <>
         <ul>
