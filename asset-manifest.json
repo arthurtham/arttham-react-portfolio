@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.318c2216.css",
-    "main.js": "/static/js/main.016c4437.js",
+    "main.css": "/static/css/main.bc5e1d3c.css",
+    "main.js": "/static/js/main.b00287fe.js",
     "static/js/453.04a809ff.chunk.js": "/static/js/453.04a809ff.chunk.js",
     "static/media/app-kiwanis.png": "/static/media/app-kiwanis.41f1c09edc71fb57a0ec.png",
     "static/media/anteater-plushie.png": "/static/media/anteater-plushie.5d710c3d0ee1a00cf622.png",
@@ -12,12 +12,12 @@
     "static/media/arthur-tham-real.jpg": "/static/media/arthur-tham-real.2999e3cc54c602bb3e4e.jpg",
     "static/media/arthur-tham-profile-yellow.jpg": "/static/media/arthur-tham-profile-yellow.3244f729680e4cd2c16f.jpg",
     "index.html": "/index.html",
-    "main.318c2216.css.map": "/static/css/main.318c2216.css.map",
-    "main.016c4437.js.map": "/static/js/main.016c4437.js.map",
+    "main.bc5e1d3c.css.map": "/static/css/main.bc5e1d3c.css.map",
+    "main.b00287fe.js.map": "/static/js/main.b00287fe.js.map",
     "453.04a809ff.chunk.js.map": "/static/js/453.04a809ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.318c2216.css",
-    "static/js/main.016c4437.js"
+    "static/css/main.bc5e1d3c.css",
+    "static/js/main.b00287fe.js"
   ]
 }
