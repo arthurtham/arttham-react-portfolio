@@ -1,23 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.bc5e1d3c.css",
-    "main.js": "/static/js/main.b00287fe.js",
+    "main.js": "/static/js/main.4d259a0c.js",
     "static/js/453.04a809ff.chunk.js": "/static/js/453.04a809ff.chunk.js",
+    "static/media/app-gami.png": "/static/media/app-gami.f32d36b9eb285f90da09.png",
+    "static/media/app-contentcreator.png": "/static/media/app-contentcreator.12c40387c80e05a0a264.png",
     "static/media/app-kiwanis.png": "/static/media/app-kiwanis.41f1c09edc71fb57a0ec.png",
     "static/media/anteater-plushie.png": "/static/media/anteater-plushie.5d710c3d0ee1a00cf622.png",
     "static/media/app-concentration.png": "/static/media/app-concentration.8136c350bc9cdf8e500f.png",
     "static/media/app-default.png": "/static/media/app-default.26ffa91a9ebe13f6af9c.png",
     "static/media/app-cashmountain.png": "/static/media/app-cashmountain.f8a037e0c2ca01e21bd5.png",
-    "static/media/app-hackuwu.png": "/static/media/app-hackuwu.f32e68fb53ba6c8f5738.png",
     "static/media/arthur-tham-real.jpg": "/static/media/arthur-tham-real.2999e3cc54c602bb3e4e.jpg",
     "static/media/arthur-tham-profile-yellow.jpg": "/static/media/arthur-tham-profile-yellow.3244f729680e4cd2c16f.jpg",
+    "static/media/app-ucicki.png": "/static/media/app-ucicki.7e20b572ba385ba69013.png",
     "index.html": "/index.html",
     "main.bc5e1d3c.css.map": "/static/css/main.bc5e1d3c.css.map",
-    "main.b00287fe.js.map": "/static/js/main.b00287fe.js.map",
+    "main.4d259a0c.js.map": "/static/js/main.4d259a0c.js.map",
     "453.04a809ff.chunk.js.map": "/static/js/453.04a809ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc5e1d3c.css",
-    "static/js/main.b00287fe.js"
+    "static/js/main.4d259a0c.js"
   ]
 }
