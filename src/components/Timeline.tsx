@@ -5,7 +5,7 @@ import { faBriefcase, faCloud, faGamepad, faGlobe, faNetworkWired, faTelevision 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { Box, Button, Link, Modal, Typography } from "@mui/material";
 
 /* EXAMPLE
 {
@@ -18,12 +18,31 @@ import { Box, Button, Modal, Typography } from "@mui/material";
   ...
 */
 const careerEntries = [
-    {
+  {
+    "title"      : "Full Stack Developer, Webflow",
+    "location"   : "Remote",
+    "company"    : "Senchigami",
+    "date"       : "Jan 2025 - Mar 2025",
+    "icon"       : faGlobe,
+    "url"        : "https://senchigami.webflow.io",
+    "description": (
+      <>
+        <ul>
+          <li>Organize database of featured organization staff and talent into separate categories to be dynamically sorted on separate member listing pages.</li>
+          <li>Design a custom Webflow CMS mechanism to allow content writers to easily add and edit member profiles, including images, bios, and social media links.</li>
+          <li>Optimise content of main webpages showcasing the organization using images and video.</li>
+          <li>Revise UI/UX layout for optimal display on mobile browsers.</li>
+        </ul>
+      </>
+    )
+  },
+  {
     "title"      : "Back-end Website Developer and Webmaster",
     "location"   : "Remote, Los Angeles, CA",
     "company"    : "Kiwanis Club of Rosemead, Kiwanis International",
     "date"       : "Jun 2024 - Present",
     "icon"       : faGlobe,
+    "url"        : "https://kiwanisclubofrosemead.org",
     "description": (
       <>
         <ul>
@@ -41,6 +60,7 @@ const careerEntries = [
     "company"    : "Self-employed",
     "date"       : "Jan 2023 - Present",
     "icon"       : faTelevision,
+    "url"        : "https://arttham.com/redirect/valoranttournament",
     "description": (
       <>
         <ul>
@@ -58,6 +78,7 @@ const careerEntries = [
     "company"    : "OS Studios (Freelance)",
     "date"       : "Sep 2022 - Present",
     "icon"       : faNetworkWired,
+    "url"        : "",
     "description": (
       <>
         <ul>
@@ -73,6 +94,7 @@ const careerEntries = [
     "company"    : "Cloudinary, Inc.",
     "date"       : "Dec 2021 - Apr 2022",
     "icon"       : faCloud,
+    "url"        : "",
     "description": (
       <>
         <ul>
@@ -88,6 +110,7 @@ const careerEntries = [
     "company"    : "Twilio, Inc.",
     "date"       : "Sep 2021 - Dec 2021",
     "icon"       : faGamepad,
+    "url"        : "",
     "description": (
       <>
         <ul>
@@ -98,11 +121,12 @@ const careerEntries = [
     )
   },
   {
-    "title"      : "Interactive Developer",
+    "title"      : "Website Developer",
     "location"   : "Irvine, CA",
     "company"    : "Circle K International at UC Irvine, Kiwanis International",
     "date"       : "Mar 2016 - Jun 2019",
     "icon"       : faGlobe,
+    "url"        : "https://ucicirclek.com",
     "description": (
       <>
         <ul>
@@ -121,16 +145,24 @@ function Timeline() {
   const [careerModalCompany, setCareerModalCompany] = React.useState("company");
   const [careerModalLocation, setCareerModalLocation] = React.useState("location");
   const [careerModalDate, setCareerModalDate] = React.useState("date");
+  const [careerModalUrl, setCareerModalUrl] = React.useState("url");
   const careerModalStyle = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    maxWidth: 600,
+    width: '90%',
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
+    paddingTop: 0,
+    paddingBottom: 4,
+    paddingLeft: 2,
+    paddingRight: 2,
+    borderRadius: 5,
+    overflowY: 'auto',
+    maxHeight: '80vh',
   }
   const handleOpen = (index: number) => {
     var careerEntry = careerEntries[index];
@@ -139,6 +171,7 @@ function Timeline() {
     setCareerModalLocation(careerEntry["location"]);
     setCareerModalCompany(careerEntry["company"]);
     setCareerModalDate(careerEntry["date"]);
+    setCareerModalUrl(careerEntry["url"]);
     setOpen(true);
   }
   const handleClose = () => setOpen(false);
@@ -181,6 +214,10 @@ function Timeline() {
         aria-describedby="career-modal-description"
       >
         <Box sx={careerModalStyle}>
+          <Box sx={{ position: 'sticky', top: 0, zIndex: 2, bgcolor: '#fff', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', minHeight: 56, borderBottom: '1px solid #e0e0e0', marginBottom: 1}}>
+            <Typography variant="h5" component="h2" sx={{ flexGrow: 1, color: 'black' }}><strong>Job Details</strong></Typography>
+            <Button variant="contained" onClick={handleClose} sx={{ backgroundColor: '#5000ca', m: 1 }}>x</Button>
+          </Box>
           <Typography id="career-modal-title" variant="h6" component="h2" color="black">
             <strong>{careerModalTitle}</strong>
           </Typography>
@@ -189,6 +226,9 @@ function Timeline() {
           </Typography>
           <Typography id="career-modal-description" color="black" sx={{ mt: 2 }}>
             {careerModalDate || ""}
+          </Typography>
+          <Typography id="career-modal-description" color="black" sx={{ mt: 2 }}>
+            {careerModalUrl ? <Button variant="contained" sx={{ backgroundColor: '#ff845b', color: '#ffffff !important', width: 'max-content' }}><Link href={careerModalUrl} target="_blank" color="inherit">Visit Website</Link></Button> : ""}
           </Typography>
           <Typography id="career-modal-description" color="black" sx={{ mt: 2 }}>
             {careerModalDescription}
