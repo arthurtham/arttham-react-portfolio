@@ -1,5 +1,5 @@
 .education-container {
-    padding: 5% 10%;
+    padding: 0% 10%;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -8,25 +8,59 @@
     svg {
         color: white;
     }
+
+    h1 {
+        text-align: center;
+    }
 }
   
 .education-container .education-grid {
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 70px;
 }
   
-.education-container .education-grid .education {
+.education-container {
     align-items: left;
     text-align: left;
 }
+
+.education-grid {
+   align-items: center;
+}
+
+.education {
+    text-align: center;
+}
+
+.education-item-1 {
+    text-align: right;
+}
+
+.education-item-2 {
+    text-align: left ;
+}
+
+#mobile-uci {
+    display: none;
+}
+
+#desktop-uci {
+    display: initial;
+}
+
+img.anteater-plushie {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    background-color: #0064A4;
+}
+
  
 @media screen {
-    @media (max-width: 768px) {
+    @media (max-width: 1169px) {
         .education-container {
             display: block;
-            padding-left: 5%;
-            padding-right: 5%;
         }
     
         .education-container .education-grid {
@@ -36,8 +70,32 @@
         .education-container .education-grid .skill {
             padding-bottom: 5%;
         }
+
+        .education-item-1 {
+            text-align: center;
+        }
+
+        .education-item-2 {
+            text-align: center;
+        }
+
+        #mobile-uci {
+            display: block;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        #desktop-uci {
+            display: none;
+        }
     }
 
+    @media (max-width: 768px) {
+        .education-container .education-grid {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
     @media (max-width: 567px) {
         .education {
             font-size: 12px;
