@@ -19,19 +19,19 @@ import { Box, Button, Link, Modal, Typography } from "@mui/material";
 */
 const careerEntries = [
   {
-    "title"      : "Full Stack Developer, Webflow",
-    "location"   : "Remote",
-    "company"    : "Senchigami",
-    "date"       : "Jan 2025 - Mar 2025",
+    "title"      : "Software Developer, WordPress, AI, Web Integration",
+    "location"   : "Remote, Dekalb, IL",
+    "company"    : "Suburban Apartments",
+    "date"       : "Aug 2025 - Present",
     "icon"       : faGlobe,
-    "url"        : "https://senchigami.webflow.io",
+    "url"        : "https://suburbanapartmentsdekalb.com",
     "description": (
       <>
         <ul>
-          <li>Organize database of featured organization staff and talent into separate categories to be dynamically sorted on separate member listing pages.</li>
-          <li>Design a custom Webflow CMS mechanism to allow content writers to easily add and edit member profiles, including images, bios, and social media links.</li>
-          <li>Optimise content of main webpages showcasing the organization using images and video.</li>
-          <li>Revise UI/UX layout for optimal display on mobile browsers.</li>
+          <li>Design and develop new WordPress site for apartment properties.</li>
+          <li>Manage and maintain a CMS mechanism to showcase floor plans and apartment surroundings via optimized image and video delivery.</li>
+          <li>Integrate third party services including AI chatbots and mailing / scheduling services, leading to increased user engagement.</li>
+          <li>Establish UI/UX layout for website display on mobile browsers.</li>
         </ul>
       </>
     )
@@ -74,7 +74,7 @@ const careerEntries = [
   },
   {
     "title"      : "Stream Software and Network Technical Support and Administration",
-    "location"   : "Los Angeles, CA & Washington, D.C.",
+    "location"   : "Los Angeles, CA; Las Vegas, NV; & Washington, D.C.",
     "company"    : "OS Studios (Freelance)",
     "date"       : "Sep 2022 - Present",
     "icon"       : faNetworkWired,
@@ -84,6 +84,24 @@ const careerEntries = [
         <ul>
           <li>Configure and troubleshoot computers running Windows 10/11 with OBS, VoiceMeeter, Discord, and Elgato media software.</li>
           <li>Deploy OS images through FOG Project servers and feeding their displays to RTMP and SRT feeds.</li>
+        </ul>
+      </>
+    )
+  },
+  {
+    "title"      : "Full Stack Developer, Webflow",
+    "location"   : "Remote",
+    "company"    : "Senchigami",
+    "date"       : "Jan 2025 - Mar 2025",
+    "icon"       : faGlobe,
+    "url"        : "https://senchigami.webflow.io",
+    "description": (
+      <>
+        <ul>
+          <li>Organize database of featured organization staff and talent into separate categories to be dynamically sorted on separate member listing pages.</li>
+          <li>Design a custom Webflow CMS mechanism to allow content writers to easily add and edit member profiles, including images, bios, and social media links.</li>
+          <li>Optimise content of main webpages showcasing the organization using images and video.</li>
+          <li>Revise UI/UX layout for optimal display on mobile browsers.</li>
         </ul>
       </>
     )

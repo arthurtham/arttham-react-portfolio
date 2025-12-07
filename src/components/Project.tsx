@@ -5,6 +5,7 @@ import imgConcentration from "../assets/images/app-concentration.png";
 import imgKiwanis from "../assets/images/app-kiwanis.png"; 
 import imgAppDefault from "../assets/images/app-default.png";
 import imgGami from "../assets/images/app-gami.png";
+import imgSA from "../assets/images/app-sa.png";
 import imgUcicki from "../assets/images/app-ucicki.png";
 import '../assets/styles/Project.scss';
 import { Button } from "@mui/material";
@@ -25,9 +26,24 @@ const projectEntries = [
 
 const projectEntries = [
     {
+        "title"      : "Apartment WordPress Website",
+        "image"      : imgSA,
+        "link"       : "https://arttham.com/redirect/sawebsite",
+        "description": (
+            <>
+                <ul>
+                    <li>The official website of a apartment property.</li>
+                    <li>Custom pages showing off floor plans, amenities, and location.</li>
+                    <li>WordPress, WordPress CMS, Jetpack, PHP.</li>
+                    <li>Kadence Blocks.</li>
+                </ul>
+            </>
+        )
+    },
+    {
         "title"      : "Content Creation WebFlow Website",
         "image"      : imgGami,
-        "link"       : "https://senchigami.webflow.io",
+        "link"       : "https://arttham.com/redirect/gami",
         "description": (
             <>
                 <ul>
@@ -39,7 +55,7 @@ const projectEntries = [
         )
     },
     {
-        "title"      : "Kiwanis Club of Rosemead",
+        "title"      : "Kiwanis Club of Rosemead Website",
         "image"      : imgKiwanis,
         "link"       : "https://kiwanisclubofrosemead.org",
         "description": (
@@ -91,8 +107,7 @@ const projectEntries = [
             <>
                 <ul>
                     <li>Memorize the number of objects and recall them when they reappear!</li>
-                    <li>Unity.</li>
-                    <li>Leaderboard: PHP and MongoDB.</li>
+                    <li>Unity, PHP, MongoDB.</li>
                 </ul>
             </>
         )

@@ -19,7 +19,14 @@ import Toolbar from '@mui/material/Toolbar';
 import ProfilePicture from '../assets/images/arthur-tham-profile-yellow.jpg';
 
 const drawerWidth = 240;
-const navItems = [['About', 'about'], ['Skills', 'expertise'], ['Career', 'history'], ['Education', 'education'], ['Projects', 'projects'], ['Contact', 'contact']];
+const navItems = [
+  ['About', 'about'], 
+  ['Skills', 'expertise'], 
+  ['Career', 'history'], 
+  ['Education', 'education'], 
+  ['Projects', 'projects'], 
+  ['Contact', 'contact']
+];
 
 function Navigation({parentToChild, modeChange}: any) {
 
@@ -78,9 +85,10 @@ function Navigation({parentToChild, modeChange}: any) {
   const name = (
     <div style={{ display: "flex", flexDirection: "row", paddingRight: "20px"}}>
       <img src={ProfilePicture} style={{ height: "40px", borderRadius:"20em"}} alt="Arthur Tham Cartoon Head" />
-      <h2 style={{ paddingLeft: "1rem", paddingTop: 0, paddingBottom: 0, margin: 0 }}>
-        Arthur Tham
-    </h2>
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingLeft: "1rem" }}>
+        <span style={{ fontSize: "1.5rem", fontWeight: "bold", lineHeight: 1, margin: 0 }}>Arthur</span>
+        <span style={{ fontSize: "0.75rem", lineHeight: 1, margin: 0 }}>Arthur Tham</span>
+      </div>
     </div>
   );
 

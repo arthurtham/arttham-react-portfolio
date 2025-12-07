@@ -22,6 +22,7 @@ const labelsFirst = [
     "GameMaker: Studio (1)",
     "Unity",
     "WebFlow",
+    "WordPress",
 ];
 
 const labelsSecond = [
@@ -64,7 +65,7 @@ function Expertise() {
                     <FontAwesomeIcon icon={faPython} size="3x"/>&nbsp;
                     <FontAwesomeIcon icon={faPhp} size="3x"/>&nbsp; 
                     <h3>Web Development</h3>
-                    <p>I work on back-end websites primary supported by the PHP/MySQL LAMP stack. I've published websites from scratch in the Bootstrap framework. I can set up databases in MySQL, MariaDB, and MongoDB, and I use MySQLWorkbench and phpMyAdmin to manage data. I also have experience using WebFlow, and I'm currently exploring React and other web technologies.</p>
+                    <p>I work on back-end websites primary supported by the PHP/MySQL LAMP stack. I've published websites from scratch in the Bootstrap framework. I can set up databases in MySQL, MariaDB, and MongoDB, and I use MySQLWorkbench and phpMyAdmin to manage data. I also have experience using WordPress and WebFlow, and I'm currently exploring React and other web technologies.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
